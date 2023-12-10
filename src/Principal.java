@@ -7,8 +7,14 @@ public class Principal {
         filme.anoDeLancamento = 1970;
         filme.duracaoEmMinutos = 200;
 
-        System.out.println(filme.nome);
-        System.out.println(filme.anoDeLancamento);
+        filme.exibeFichaTecnica();
+        filme.avalia(8);
+        filme.avalia(5);
+        filme.avalia(10);
+
+        filme.imprime();
+
+
 
     }
 }
