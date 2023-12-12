@@ -1,3 +1,5 @@
+package br.com.marcelo.screenmach.modelos;
+
 public class Filme {
     public String nome;
     public int anoDeLancamento;
@@ -7,38 +9,39 @@ public class Filme {
     public int duracaoEmMinutos;
 
 
-    public double getSomaAvaliacao(){
+    public double getSomaAvaliacao() {
 
         return somaAvaliacao;
 
     }
-    public int getTotalDeAvaliacoes(){
+
+    public int getTotalDeAvaliacoes() {
 
         return totalDeAvaliacoes;
 
     }
 
-    public void exibeFichaTecnica(){
+    public void exibeFichaTecnica() {
 
         System.out.println("Nome do filme: " + nome);
         System.out.println("Ano de lançamento: " + anoDeLancamento);
     }
 
-    public void avalia(double nota){
+    public void avalia(double nota) {
 
         somaAvaliacao += nota;
         totalDeAvaliacoes++;
 
     }
 
-    public double obterMediaAvaliacao(){
+    public double obterMediaAvaliacao() {
 
-        return somaAvaliacao/totalDeAvaliacoes;
+        return somaAvaliacao / totalDeAvaliacoes;
     }
 
-    public void imprime(){
+    public void imprime() {
 
-        System.out.println("Média da Avaliação: "+obterMediaAvaliacao());
+        System.out.println("Média da Avaliação: " + obterMediaAvaliacao());
     }
 
 
