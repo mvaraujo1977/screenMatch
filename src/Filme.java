@@ -1,10 +1,22 @@
 public class Filme {
-    String nome;
-    int anoDeLancamento;
-    boolean incluidoNoPlano;
+    public String nome;
+    public int anoDeLancamento;
+    public boolean incluidoNoPlano;
     private double somaAvaliacao;
     private int totalDeAvaliacoes;
-    int duracaoEmMinutos;
+    public int duracaoEmMinutos;
+
+
+    public double getSomaAvaliacao(){
+
+        return somaAvaliacao;
+
+    }
+    public int getTotalDeAvaliacoes(){
+
+        return totalDeAvaliacoes;
+
+    }
 
     public void exibeFichaTecnica(){
 
@@ -26,9 +38,8 @@ public class Filme {
 
     public void imprime(){
 
-        System.out.println(somaAvaliacao);
-        System.out.println(totalDeAvaliacoes);
-        System.out.println(obterMediaAvaliacao());
+
+        System.out.println("Média da Avaliação: "+obterMediaAvaliacao());
     }
 
 
