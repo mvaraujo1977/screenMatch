@@ -6,25 +6,25 @@ public class Filme {
     int totalDeAvaliacoes;
     int duracaoEmMinutos;
 
-    void exibeFichaTecnica(){
+    public void exibeFichaTecnica(){
 
         System.out.println("Nome do filme: " + nome);
         System.out.println("Ano de lançamento: " + anoDeLancamento);
     }
 
-    void avalia(double nota){
+    public void avalia(double nota){
 
         somaAvaliacao += nota;
         totalDeAvaliacoes++;
 
     }
 
-    double obterMediaAvaliacao(){
+    public double obterMediaAvaliacao(){
 
         return somaAvaliacao/totalDeAvaliacoes;
     }
 
-    void imprime(){
+    public void imprime(){
 
         System.out.println(somaAvaliacao);
         System.out.println(totalDeAvaliacoes);
