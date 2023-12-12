@@ -38,7 +38,6 @@ public class Filme {
 
     public void imprime(){
 
-
         System.out.println("Média da Avaliação: "+obterMediaAvaliacao());
     }
 
