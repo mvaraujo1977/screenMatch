@@ -1,13 +1,16 @@
 import br.com.marcelo.screenmach.modelos.Filme;
+import br.com.marcelo.screenmach.modelos.Serie;
 
 public class Principal {
     public static void main(String[] args) {
 
+        System.out.println("*************** Filme *****************************");
         Filme filme = new Filme();
 
         filme.setNome("O Poderoso Chefão");
         filme.setAnoDeLancamento(1970);
         filme.setDuracaoEmMinutos(200);
+
 
         filme.exibeFichaTecnica();
         filme.avalia(8);
@@ -17,8 +20,18 @@ public class Principal {
         System.out.println("Soma das Avaliações: " +filme.getSomaAvaliacao());
         System.out.println("Total das Avaliações: " +filme.getTotalDeAvaliacoes());
         filme.imprime();
+        System.out.println("Duração do filme: "+filme.getDuracaoEmMinutos());
 
+        System.out.println("******************* Serie *************************");
 
+        Serie serie = new Serie();
+        serie.setNome("Lost");
+        serie.setAnoDeLancamento(2000);
+        serie.exibeFichaTecnica();
+        serie.setTemporadas(10);
+        serie.setEpisodiosPorTemporada(10);
+        serie.setMinutosPorEpisodio(50);
+        System.out.println("Duração da Série: "+serie.getDuracaoEmMinutos());
 
     }
 }

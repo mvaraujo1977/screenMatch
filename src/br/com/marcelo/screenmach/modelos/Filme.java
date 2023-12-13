@@ -1,58 +1,13 @@
 package br.com.marcelo.screenmach.modelos;
 
-public class Filme {
-    private String nome;
-    private int anoDeLancamento;
-    private boolean incluidoNoPlano;
-    private double somaAvaliacao;
-    private int totalDeAvaliacoes;
-    private int duracaoEmMinutos;
+public class Filme extends Titulo{
+    private String diretor;
 
-
-    public double getSomaAvaliacao() {
-        return somaAvaliacao;
+    public String getDiretor() {
+        return diretor;
     }
 
-    public int getTotalDeAvaliacoes() {
-        return totalDeAvaliacoes;
+    public void setDiretor(String diretor) {
+        this.diretor = diretor;
     }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public void setAnoDeLancamento(int anoDeLancamento) {
-        this.anoDeLancamento = anoDeLancamento;
-    }
-
-    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
-        this.duracaoEmMinutos = duracaoEmMinutos;
-    }
-
-
-
-    public void exibeFichaTecnica() {
-
-        System.out.println("Nome do filme: " + nome);
-        System.out.println("Ano de lançamento: " + anoDeLancamento);
-    }
-
-    public void avalia(double nota) {
-
-        somaAvaliacao += nota;
-        totalDeAvaliacoes++;
-
-    }
-
-    public double obterMediaAvaliacao() {
-
-        return somaAvaliacao / totalDeAvaliacoes;
-    }
-
-    public void imprime() {
-
-        System.out.println("Média da Avaliação: " + obterMediaAvaliacao());
-    }
-
-
 }
