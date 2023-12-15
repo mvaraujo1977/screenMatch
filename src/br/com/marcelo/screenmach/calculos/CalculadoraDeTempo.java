@@ -8,6 +8,8 @@ public class CalculadoraDeTempo {
         return tempoTotal;
     }
 
+
+
 //    public void inclui(Filme f){
 //        this.tempoTotal += f.getDuracaoEmMinutos();
 //    }
@@ -16,6 +18,7 @@ public class CalculadoraDeTempo {
 //        this.tempoTotal += s.getDuracaoEmMinutos();
 //    }
 
+    //aqui vou usar o polimorfismo: uma hora incluo serie e outra hora filme
     public void inclui(Titulo titulo){
         System.out.println("Adiconando duração em minutos de: " + titulo);
         this.tempoTotal += titulo.getDuracaoEmMinutos();
