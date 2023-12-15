@@ -46,6 +46,7 @@ public class Principal {
         calculadora.inclui(filme);
         calculadora.inclui(outroFilme);
         calculadora.inclui(serie);
+
         System.out.println(calculadora.getTempoTotal());
 
 
