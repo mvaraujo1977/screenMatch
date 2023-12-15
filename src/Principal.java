@@ -1,3 +1,4 @@
+import br.com.marcelo.screenmach.calculos.CalculadoraDeTempo;
 import br.com.marcelo.screenmach.modelos.Filme;
 import br.com.marcelo.screenmach.modelos.Serie;
 
@@ -32,6 +33,23 @@ public class Principal {
         serie.setEpisodiosPorTemporada(10);
         serie.setMinutosPorEpisodio(50);
         System.out.println("Duração da Série: "+serie.getDuracaoEmMinutos());
+
+        System.out.println("******************* calculadora *************************");
+
+        Filme outroFilme = new Filme();
+        outroFilme.setNome("Avatar");
+        outroFilme.setAnoDeLancamento(2023);
+        outroFilme.setDuracaoEmMinutos(180);
+
+
+        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        calculadora.inclui(filme);
+        calculadora.inclui(outroFilme);
+        calculadora.inclui(serie);
+        System.out.println(calculadora.getTempoTotal());
+
+
+
 
     }
 }
