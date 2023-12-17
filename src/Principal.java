@@ -1,4 +1,6 @@
 import br.com.marcelo.screenmach.calculos.CalculadoraDeTempo;
+import br.com.marcelo.screenmach.calculos.FiltroRecomendacao;
+import br.com.marcelo.screenmach.modelos.Episodio;
 import br.com.marcelo.screenmach.modelos.Filme;
 import br.com.marcelo.screenmach.modelos.Serie;
 
@@ -48,6 +50,19 @@ public class Principal {
         calculadora.inclui(serie);
 
         System.out.println(calculadora.getTempoTotal());
+
+        System.out.println("******************* recomentadacao *************************");
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(filme);
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setSerie(serie);
+        episodio.setTotalVisualizacoes(300);
+        filtro.filtra(episodio);
+
+
 
 
 

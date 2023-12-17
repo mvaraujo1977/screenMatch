@@ -1,6 +1,8 @@
 package br.com.marcelo.screenmach.modelos;
 
-public class Filme extends Titulo{
+import br.com.marcelo.screenmach.calculos.Classificavel;
+
+public class Filme extends Titulo implements Classificavel {
     private String diretor;
 
     public String getDiretor() {
@@ -9,5 +11,11 @@ public class Filme extends Titulo{
 
     public void setDiretor(String diretor) {
         this.diretor = diretor;
+    }
+
+
+    @Override
+    public int getClassificavel() {
+        return (int)obterMediaAvaliacao()/2;
     }
 }
