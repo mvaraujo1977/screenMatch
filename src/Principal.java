@@ -4,6 +4,8 @@ import br.com.marcelo.screenmach.modelos.Episodio;
 import br.com.marcelo.screenmach.modelos.Filme;
 import br.com.marcelo.screenmach.modelos.Serie;
 
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
 
@@ -61,6 +63,31 @@ public class Principal {
         episodio.setSerie(serie);
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
+
+
+        var filmeDoPaulo = new Filme();
+
+        filmeDoPaulo.setDuracaoEmMinutos(200);
+        filmeDoPaulo.setNome("DogVille");
+        filmeDoPaulo.setAnoDeLancamento(2003);
+        filmeDoPaulo.avalia(10);
+
+        System.out.println("******************* ARRAY *************************");
+
+        //Criando um array()
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(filme);
+        listaDeFilmes.add(outroFilme);
+        listaDeFilmes.add(filmeDoPaulo);
+
+        System.out.println("Total de filme " + listaDeFilmes.size() );
+        System.out.println("Primeiro filme " + listaDeFilmes.get(0).getNome());
+
+
+
+
+
 
 
 
